@@ -1,0 +1,21 @@
+name: codesys4_test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: KRST-Kerstin/setup-codesys4@v1
+
+      - name: Check installation
+        run: c4-cli version
+
