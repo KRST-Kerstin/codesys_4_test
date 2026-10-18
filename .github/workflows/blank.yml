@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: KRST-Kerstin/codesys4-setup@v1
+      - uses: KRST-Kerstin/codesys4-setup
 
       - name: Check installation
         run: c4-cli version
